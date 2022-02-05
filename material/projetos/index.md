@@ -1,92 +1,53 @@
-# Min-set-cover
+# Alinhamento de Sequencias de DNA
 
-O problema `min-set-cover` é um dos mais clássicos problemas de otimização combinatória. Uma instância do min-set-cover consiste em um universo `U` de objetos e uma coleção `F` de subconjuntos de `U`. O desafio é identificar uma menor sub-coleção `S` de `F` sujeita à restrição de que a união dos conjuntos em `S` deve cobrir o universo `U`. 
+Em Bioinformática, o problema de **alinhamento de sequências de DNA** consiste no processo de comparar duas ou mais sequências de bases de forma a se observar seu nível de similaridade. Trata-se de um problema extremamente importante no contexto atual, pois permite comparar sequencias virais de SARS-COV2 em bancos de dados genômicos para detecção de novas mutações.
 
-Por exemplo, suponha que uma cidade deseje selecionar um conjunto de espaços físicos para implantar uma rede de corpos de bombeiros de forma que cada casa esteja a menos de 5 km de pelo menos um corpo de bombeiros, e de forma que o número de corpos de bombeiros necessários seja minimizado. Nesse cenário, o conjunto de casas forma o universo `U` de itens que devem ser cobertos por qualquer solução; e a i-ésima localização possível para um corpo de bombeiros dá origem a um conjunto `Si` de residências que estão a 5 km dele. Supondo também que o conjunto total de locais possíveis seja suficientemente numeroso para que cada casa esteja a 5 km de um ou mais dos locais em consideração. A solução min-set-cover necessária é o menor conjunto de locais `S` de modo que a união desses sub-conjuntos cubra todas as residências do município. Ou seja, o que é necessário é um menor subconjunto `S` tal que cada casa em U apareça em pelo menos um elemento em `S`.
+O nível de similaridade pode ser calculado com base em **acertos (match)** e **erros (gap e mismatch)**. Os acertos contribuem com sinal positivo (+) para o nível de similaridade e, os erros, com sinal negativo (-). Abaixo temos um exemplo de cálculo do nível similaridade:
 
-O problema min-set-cover, é NP-hard e, portanto, devemos fazer uso de técnicas aproximadas eficientes que possam encontrar uma boa solução.
+![image](alignment.png)
 
-Seu programa tomará como entrada a seguinte estrutura: a primeira linha contém dois números n e m. Onde `n` é `|U|` e `m` é o número de subconjuntos. Assuma `n ≤ 200` e `m ≤ 2^n`
+Vamos associar a pontuação **+1 (match)** e as penalidades **-1 (gap)** e **-4 (mismatch)**. Assim, teremos o seguinte nível de similaridade:
+
+23 matches x (+1) + 4 gaps x (-1) + 3 mismatches x (-4) = 23-4-12 = 7
+
+Neste contexto, o problema de alinhamento de sequencias de DNA pode ser colocado da seguinte forma:
 
 ```
-10 5
-5 7 8 9 10
+Dadas duas sequencias de DNA, com as bases A,T,G,C e - para indicar gap, 
+encontrar o alinhamento que maximize o nível de similaridade. 
+```
+
+
+Neste projeto, seu objetivo será construir programas para encontrar este alinhamento de nível máximo de similaridade, utilizando várias estratégias. 
+
+Cada um dos seus programas tomará como entrada a seguinte estrutura: a primeira linha contém dois números `n` e `m`, onde `n` é o tamanho da primeira sequencia e, `m`, o tamanho da segunda. Assuma `n ≤ 200` e `m ≤ 200`. A segunda linha contém as bases da primeira sequencia e, a terceira linha, as bases da segunda.
+
+```
 5 7
-1 3 6 10
-4 6 7 9 10
-1 2 8 10
+AT-CC
+TTTCCAA
 ```
 
-A saída deve ser uma linha de inteiros `[1...m]`, contendo o número dos subconjuntos que formam a solução:
+A saída deve ser uma linha com um número inteiro indicando o nível máximo de similaridade.
 
 ```
-1 2 4 5
+2
 ```
-
-**Verificação automática**:
-
-Conforme o número de entrada aumenta, ficará cada vez mais custoso verificar se a sua solução resolve o problema do min-set-cover. Faça um programa que recebe como entrada o arquivo de input original adicionado 
-
-Exemplo:
-
-```
-./verify < solucao1.txt
-```
-
-onde `solucao1.txt` contém:
-
-```
-10 5
-5 7 8 9 10
-5 7
-1 3 6 10
-4 6 7 9 10
-1 2 8 10
-1 3 4 5
-```
-
-E tem como saída: `Cobertura atendida`.
-<!-- 
-Dados `M` objetos com valor `V[i], i=1..M` e `N` pessoas, desejamos dividir estes objetos de maneira mais igualitária possível. Como não é possível "quebrar" objetos, naturalmente alguns ficarão com objetos de maior valor que os outros. Nosso objetivo neste projeto é definir qual seria o *menor valor que uma pessoa deveria aceitar nesta partição*.
-
-Para fazer isso vamos usar o seguinte procedimento: uma pessoa será responsável por fazer a partição dos objetos em `N` partes. Porém, ela deverá permitir que **todas as outras `N-1` pessoas escolham primeiro qual parte elas desejam**. Ou seja, a pessoa que fez a partição naturalmente ficará com a parte de menor valor. Portanto nosso objetivo será **maximizar** o valor da parte de **menor** valor. Chamaremos este valor de *MMS* e a atribuição que o gera de *parte 1-de-n*.
-
-Vejamos um exemplo: separaremos 6 objetos para 3 pessoas. Os valores dos objetos são `{20, 11, 9, 13, 14, 37}`. Uma possível partição seria
-
-```
-{37}
-{20, 11}
-{14, 13, 9}
-```
-
-Com esta partição, o menor valor seria o do segundo grupo (31). Note que várias divisões são possíveis:
-
-```
-{37}
-{20, 14}
-{13, 11, 9}
-```
-
-Nesta outra partição o menor valor é o do terceiro grupo (33). Portanto, entre essas duas divisões a segunda é melhor, já que a pessoa que dividiu ganharia um valor maior.
-
-Usaremos este problema na disciplina por uma razão bem simples: encontrar o *MMS* é uma tarefa *NP-difícil*. Ou seja, o melhor que podemos fazer neste caso para garantir a melhor solução é, no pior caso, testar todas as alocações possíveis. Claramente isso é lento, então é uma bom exemplo de aplicação de SuperComputação! -->
-**Gerador de instâncias**
-
-Neste [link](https://colab.research.google.com/drive/16MSMeqDoZF3zBFIQw_Yt7Y601v6MpxaW?usp=sharing) você encontra um código Python que pode ser utilizado para gerar instâncias para seus programa. Observe que não há garantia de que as instâncias geradas possuem solução.
+Neste caso, este nível máximo de similaridade pode ser associado ao alinhamento T-CC/TTCC (1-1+1+1=2) ou a CC/CC(1+1=2). Você pode usar o notebook SequenceGenerator.ipynb para gerar instâncias aleatórias para seus testes.
 
 
 
-## Técnicas estudadas e correção automática
+## Estratégias a serem estudadas e correção automática
 
-Para cada técnica estudada em aula implementaremos versões básicas e avançadas. Também será necessário implementar versões paralelas em CPU e GPU. Veja abaixo as datas de entrega e descrições de cada técnica implementada. Em geral, o enunciado de uma parte é liberado após a data de entrega da parte anterior.
+Para cada estratégia que vamos estudar, implementaremos um programa correspondente no projeto. Veja abaixo as datas de entrega e descrições de cada estratégia a ser implementada. Em geral, o enunciado de uma parte é liberado após a data de entrega da parte anterior.
 
-1. [Solução Heurística](heuristico) (15/09)
-2. [Busca Local](busca-local)(22/09)
-3. [Busca Exaustiva](busca-exaustiva)(27/09)
-4. [Relatório Preliminar](relatorio-1) (02/11)
-5. [Paralelismo Multicore](paralelismo-multicore) (15/11)
-6. [Paralelismo GPU](paralelismo-gpu) (22/11)
-7. [Relatório Final](relatorio-2) (06/12)
+1. [Solução Heurística](heuristico) (18/03)
+2. [Busca Local](busca-local)(01/04)
+3. [Busca Exaustiva](busca-exaustiva)(15/04)
+4. [Relatório Preliminar](relatorio-1) (29/04)
+5. [Paralelismo Multicore](paralelismo-multicore) (13/05)
+6. [Paralelismo GPU](paralelismo-gpu) (27/05)
+7. [Relatório Final](relatorio-2) (03/06)
 
 <!-- 1. [Solução Heurística](heuristico) (23/03)
 2. [Busca local](busca-local) (09/04)
