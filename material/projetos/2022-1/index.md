@@ -41,7 +41,7 @@ Neste caso, este nível máximo de similaridade pode ser associado ao alinhament
 
 Para cada estratégia que vamos estudar, implementaremos um programa correspondente no projeto. Veja abaixo as datas de entrega e descrições de cada estratégia a ser implementada. Em geral, o enunciado de uma parte é liberado após a data de entrega da parte anterior.
 
-1. [Solução Heurística](heuristico) (18/03)
+1. [Solução Heurística](heuristico.md) (18/03)
 2. [Busca Local](busca-local)(01/04)
 3. [Busca Exaustiva](busca-exaustiva)(15/04)
 4. [Relatório Preliminar](relatorio-1) (29/04)
