@@ -1,3 +1,4 @@
+
 # Heurística de Alinhamento Local de Smith-Waterman
 
 Um algoritmo ingênuo para fazer o alinhamento local de duas sequencias de DNA poderia ser:
@@ -13,4 +14,4 @@ Abaixo, temos a descrição do algoritmo desta estratégia:
 
 **Algoritmo Smith-Waterman**
 
-**Entrada:** 
+**Entrada:** Duas sequencias de DNA a_{i} e b_{i}
