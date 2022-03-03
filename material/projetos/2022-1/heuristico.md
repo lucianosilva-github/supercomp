@@ -45,4 +45,9 @@ Sequência 1 = A-CACACTA
 Sequência 2 = AGCACAC-A
 </pre>
 
+A partir desta descrição, nosso primeiro projeto terá duas tarefas:
 
+<ul>
+  <li> Implementar um programa C++ para ler um arquivo contendo os tamanhos de duas sequencias de DNA, seguidos das duas sequencias, uma por linha. Calcular o score máximo de alinhamento local usando a heurística de Smith-Waterman;
+  <li> a partir do score máximo, reconstruir e exibir o alinhamento local das duas sequencias.
+</ul>
