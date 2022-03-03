@@ -51,3 +51,7 @@ A partir desta descrição, nosso primeiro projeto terá duas tarefas:
   <li> Implementar um programa C++ para ler um arquivo contendo os tamanhos de duas sequencias de DNA, seguidos das duas sequencias, uma por linha. Calcular o score máximo de alinhamento local usando a heurística de Smith-Waterman;
   <li> a partir do score máximo, reconstruir e exibir o alinhamento local das duas sequencias.
 </ul>
+
+No diretório do projeto, há um gerador de entradas disponibilizado como um notebook Python.
+
+Para quem estiver interessado no artigo original da heurística de Smith-Waterman, basta consultar o link http://arep.med.harvard.edu/pdf/Smith81.pdf.
