@@ -26,7 +26,7 @@ A partir desta descrição, nosso primeiro projeto terá duas tarefas:
 
 <ul>
   <li> Implementar um programa C++ para ler um arquivo contendo os tamanhos de duas sequencias de DNA, seguidos das duas sequencias, uma por linha. Calcular o score máximo utilizando o algoritmo acima, assim como as subsequencias associadas a ele. 
-  <li> Testar o algoritmo diversas vezes e comparar seus resultados com a heurística do primeiro projeto observando, principalmente, o seu comportamento em relação aos valores aleatórios k e p. Estes resultados e sua comparação deverão estar presentes no relatório a ser entregue posteriorme.
+  <li> Testar o algoritmo diversas vezes e comparar seus resultados com a heurística do primeiro projeto observando, principalmente, o seu comportamento em relação aos valores aleatórios k e p. Estes resultados e sua comparação deverão estar presentes no relatório a ser entregue posteriormente.
 </ul>
 
 No diretório do projeto, há um gerador de entradas disponibilizado como um notebook Python.
