@@ -25,8 +25,8 @@ Saída: Score de um alinhamento das sequencias
 A partir desta descrição, nosso primeiro projeto terá duas tarefas:
 
 <ul>
-  <li> Implementar um programa C++ para ler um arquivo contendo os tamanhos de duas sequencias de DNA, seguidos das duas sequencias, uma por linha. Calcular o score máximo de alinhamento local usando a heurística de Smith-Waterman. As informações para reconstrução deverão ser armazenadas no formato de struct.
-  <li> a partir do score máximo, reconstruir e exibir o alinhamento local ótimo das duas sequencias.
+  <li> Implementar um programa C++ para ler um arquivo contendo os tamanhos de duas sequencias de DNA, seguidos das duas sequencias, uma por linha. Calcular o score máximo utilizando o algoritmo acima, assim como as subsequencias associadas a ele. 
+  <li> Testar o algoritmo diversas vezes e comparar seus resultados com a heurística do primeiro projeto observando, principalmente, o seu comportamento em relação aos valores aleatórios k e p. Estes resultados e sua comparação deverão estar presentes no relatório a ser entregue posteriorme.
 </ul>
 
 No diretório do projeto, há um gerador de entradas disponibilizado como um notebook Python.
