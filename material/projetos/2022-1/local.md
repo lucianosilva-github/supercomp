@@ -16,8 +16,8 @@ Saída: Score de um alinhamento das sequencias
 
 1. Gerar uma subsequencia sb=b[j,j+1,...,j+k] de b, de tamanho aleatório k, 1<=k<=m
 2. Gerar p subsequencias aleatórias sa=a[i,i+1,...,i+k], com tamanho k calculado no passo (1)
-3. Calcular o score máximo m entre cada par (sa,sb)
-4. Devolver o score m e as subsequencias associadas a este score
+3. Calcular os scores de cada par (sa,sb) com os pesos wmat, wmis e wgap
+4. Devolver o score máximo m entre os scores do passo (3) e as subsequencias associadas a ele
 </pre>
 
 Os passos diagonal, deleção e inserção são chamados, respectivamente, de salto em diagonal, salto de cima para baixo e salto da esquerda para a direita, e representam movimentações para obtenção do alinhamento local ótimo. 
