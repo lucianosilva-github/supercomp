@@ -9,7 +9,7 @@ DELL6         R$ 60.000,00            R$ 4.500,00         R$  900,00
 IBMC3         R$ 40.000,00            R$ 4.600,00         R$  940,00
 MICR2         R$ 30.000,00            R$ 6.400,00         R$1.200,00
 
-Não é possível comprar ações fracionadas, somente um lote inteiro. 
+Não é possível comprar ações fracionadas, somente o lote inteiro. 
 
 1. Modele este problema como um problema de otimização.
 2. Crie uma entrada de dados para a instância do problema como mostrado acima.
