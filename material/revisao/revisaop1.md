@@ -1,6 +1,6 @@
 # Revisão para P1
 
-Um investidor possui um orçamento de R$ 100.000,00 para aplicar no mercado de ações. Uma instituição financeira lhe dá as seguintes opções para construir o seu portifólio de investimentos, a ser composto por lotes de ações;
+Um investidor possui um orçamento de R$ 100.000,00 para aplicar no mercado de ações. Uma instituição financeira lhe dá as seguintes opções para construir o seu portifólio de investimentos, a ser composto por lotes de ações:
 
 | **AÇÃO** | **VALOR DO LOTE** | **RETORNO DO LOTE** | **IMPOSTO A PAGAR** |
 |:--------:|:-----------------:|:-------------------:|:-------------------:|
@@ -9,7 +9,8 @@ Um investidor possui um orçamento de R$ 100.000,00 para aplicar no mercado de a
 |   MICR7  |    R$ 30.000,00   |     R$ 6.400,00     |     R$ 1.200,00     |
 |   IBMC3  |    R$ 40.000,00   |     R$ 4.600,00     |      R$ 940,00      |
 
-Não é possível comprar ações fracionadas, somente o lote inteiro. 
+Não é possível comprar ações fracionadas, somente o lote inteiro. Com base neste cenário:
+
 
 1. Modele este problema como um problema de otimização.
 2. Crie uma entrada de dados para a instância do problema como mostrado acima.
