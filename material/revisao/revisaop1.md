@@ -2,12 +2,12 @@
 
 Um investidor possui um orçamento de R$ 100.000,00 para aplicar no mercado de ações. Uma instituição financeira lhe dá as seguintes opções para construir o seu portifólio de investimentos, a ser composto por lotes de ações;
 
-AÇÃO         VALOR DO LOTE          RETORNO DO LOTE     IMPOSTO A PAGAR
-
-PETR4         R$ 30.000,00            R$ 2.700,00         R$  650,00
-DELL6         R$ 60.000,00            R$ 4.500,00         R$  900,00
-IBMC3         R$ 40.000,00            R$ 4.600,00         R$  940,00
-MICR2         R$ 30.000,00            R$ 6.400,00         R$1.200,00
+| **AÇÃO** | **VALOR DO LOTE** | **RETORNO DO LOTE** | **IMPOSTO A PAGAR** |
+|:--------:|:-----------------:|:-------------------:|:-------------------:|
+|   PETR4  |    R$ 30.000,00   |     R$ 2.700,00     |      R$ 640,00      |
+|   DELL6  |    R$ 60.000,00   |     R$ 4.500,00     |      R$ 900,00      |
+|   MICR7  |    R$ 30.000,00   |     R$ 6.400,00     |     R$ 1.200,00     |
+|   IBMC3  |    R$ 40.000,00   |     R$ 4.600,00     |      R$ 940,00      |
 
 Não é possível comprar ações fracionadas, somente o lote inteiro. 
 
