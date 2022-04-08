@@ -15,7 +15,13 @@ Saída: Score de um alinhamento das sequencias
 3. Devolver o score máximo m entre os scores do passo (2) e as subsequencias associadas a ele
 </pre>
 
-Observe que, no passo (2), as subsequencias podem não ter o mesmo tamanho. Assim, não será possível calcular diretamente um score simples.
+Observe que, no passo (2), as subsequencias podem não ter o mesmo tamanho. Assim, não será possível calcular diretamente um score simples. Podemos usar, por exemplo:
+
+<ul>
+         <li> a estratégia vista no primeiro projeto (Alinhamento Local de Smith-Waterman) para comparar duas subsequencias
+         <li> um truncamento a subsequencia maior pelo tamanho da subsequencia menor e calcular o score simples entre as duas subsequencias resultantes
+         <li> o Alinhamento Local de Smith-Waterman quando as subsequencias forem diferentes e, quando forem iguais, a estratégia aleatória do Projeto II.
+                  </ul> 
 
 
 A partir desta descrição, nosso terceiro projeto terá duas tarefas:
