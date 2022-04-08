@@ -19,8 +19,8 @@ Observe que, no passo (2), as subsequencias podem não ter o mesmo tamanho. Assi
 
 <ul>
          <li> a estratégia vista no primeiro projeto (Alinhamento Local de Smith-Waterman) para comparar duas subsequencias
-         <li> um truncamento a subsequencia maior pelo tamanho da subsequencia menor e calcular o score simples entre as duas subsequencias resultantes
-         <li> o Alinhamento Local de Smith-Waterman quando as subsequencias forem diferentes e, quando forem iguais, a estratégia aleatória do Projeto II.
+         <li> um truncamento da subsequencia maior pelo tamanho da subsequencia menor e calcular o score simples entre as duas subsequencias resultantes
+         <li> o Alinhamento Local de Smith-Waterman quando as subsequencias forem de tamanhos diferentes e, quando forem de tamanho igual, a estratégia aleatória do Projeto II.
                   </ul> 
 
 
