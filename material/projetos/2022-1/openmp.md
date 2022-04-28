@@ -24,5 +24,7 @@ O que entregar:
 Um detalhe importante é que, como agora estamos trabalhando com paralelismo, os tamanhos dos arquivos de testes precisam ser bem maiores. Muitas vezes, os resultados de speedup 
 aparecem a partir de grandes instâncias do problema.
 
+Caso você considere necessário, pode refatorar a sua implementação sequencial para poder explorar mais mecanismos de OpenMP.
+
 
 
