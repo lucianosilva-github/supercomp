@@ -21,7 +21,7 @@ O que entregar:
   <li> resultados dos testes
 </ul>
 
-Um detalhe importante é que, como agora estamos trabalhando com paralelismo, o tamanho dos arquivos de testes precisam ser bem maiores. Muitas vezes, os resultados de speedup 
+Um detalhe importante é que, como agora estamos trabalhando com paralelismo, os tamanhos dos arquivos de testes precisam ser bem maiores. Muitas vezes, os resultados de speedup 
 aparecem a partir de grandes instâncias do problema.
 
 
